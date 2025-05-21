@@ -9,7 +9,7 @@
 </head>
 <body>
   <!--タブ表示ラジオボタンで設定してCSSで調整-->
-  <div class="area .tab-container">
+  <div class="area .tab-header">
     <input type="radio" name="tab_name" id="tab1" checked>
     <label class="tab_class" for="tab1">お好み焼き</label>
     <div class="content_class">
