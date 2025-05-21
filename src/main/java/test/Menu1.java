@@ -19,8 +19,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class Menu1 extends HttpServlet {
 
     public static final String URL = "jdbc:mysql://localhost:3306/order_management";
-    public static final String USER = "takaki";
-    public static final String PASSWD = "1234";
+    public static final String USER = "root";
+    public static final String PASSWD = "";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -51,6 +51,6 @@ public class Menu1 extends HttpServlet {
         }
 
         request.setAttribute("product_list", productList);
-        request.getRequestDispatcher("/product.jsp").forward(request, response);
+        request.getRequestDispatcher("/OrderMenu_test.jsp").forward(request, response);
     }
 }
