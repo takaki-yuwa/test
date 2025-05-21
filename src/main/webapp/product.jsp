@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="test.Product1" %>
+<%@ page import="test.product_list" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body>
     <h1>お好み焼きカテゴリーの商品一覧</h1>
     <%
-        List<Product1> productList = (List<Product1>) request.getAttribute("product_list");
+        List<product_list> productList = (List<product_list>) request.getAttribute("product_list");
         if (productList != null && !productList.isEmpty()) {
     %>
         <table border="1">
@@ -17,7 +17,7 @@
                 <th>商品名</th>
                 <th>価格</th>
             </tr>
-            <% for(Product1 p : productList) { %>
+            <% for(product_list p : productList) { %>
                 <tr>
                     <td><%= p.getName() %></td>
                     <td><%= p.getPrice() %> 円</td>

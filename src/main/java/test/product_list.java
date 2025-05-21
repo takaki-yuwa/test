@@ -1,10 +1,10 @@
 package test;
 
-public class Product1 {
+public class product_list {
     private String name;
     private int price;
 
-    public Product1(String name, int price) {
+    public product_list(String name, int price) {
         this.name = name;
         this.price = price;
     }
