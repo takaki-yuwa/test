@@ -1,11 +1,11 @@
-package test;
+package servlet;
 
-public class product_list {
+public class topping_list {
     private String name;
     private int price;
     private String category;
 
-    public product_list(String name, int price, String category) {
+    public topping_list(String name, int price, String category) {
         this.name = name;
         this.price = price;
         this.category = category;

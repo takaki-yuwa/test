@@ -1,4 +1,4 @@
-package test;
+package servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/product")
-public class Menu1 extends HttpServlet {
+public class Details extends HttpServlet {
 
     public static final String URL = "jdbc:mysql://localhost:3306/order_management";
     public static final String USER = "root";
@@ -26,7 +26,7 @@ public class Menu1 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
 
-        List<product_list> productList = new ArrayList<>();
+        List<topping_list> productList = new ArrayList<>();
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -41,7 +41,7 @@ public class Menu1 extends HttpServlet {
                 String name = rs.getString("product_name");
                 int price = rs.getInt("product_price");
                 String category = rs.getString("category_name");
-                productList.add(new product_list(name, price, category));
+                productList.add(new topping_list(name, price, category));
             }
 
             rs.close();
