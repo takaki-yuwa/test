@@ -22,7 +22,7 @@ public class ProductDAO {
                 String name = rs.getString("product_name");
                 int price = rs.getInt("product_price");
                 String category = rs.getString("category_name");
-                productNameList.add(new product_list(name, price, category)); // ← 修正済み
+                productNameList.add(new product_list(name, price, category));
             }
 
         } catch (SQLException e) {

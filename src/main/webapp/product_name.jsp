@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="test.product_list" %>
+<%@ page import="servlet.product_list" %>
 <html>
 <head>
     <meta charset="UTF-8">
