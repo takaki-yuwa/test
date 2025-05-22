@@ -34,13 +34,14 @@ public class Menu1 extends HttpServlet {
             Statement st = con.createStatement();
 
             // 商品だけを取得
-            String sql = "SELECT product_name, product_price  FROM product ";
+            String sql = "SELECT product_name, product_price, category_name  FROM product ";
             ResultSet rs = st.executeQuery(sql);
 
             while (rs.next()) {
                 String name = rs.getString("product_name");
                 int price = rs.getInt("product_price");
-                productList.add(new product_list(name, price));
+                String category = rs.getString("category_name");
+                productList.add(new product_list(name, price, category));
             }
 
             rs.close();
