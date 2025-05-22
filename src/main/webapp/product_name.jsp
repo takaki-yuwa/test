@@ -14,7 +14,7 @@
 
         <p>テーブルに保存されている商品名一覧</p>
         <% for(String productName : productNameList) { %>
-            <%= productName %><br>
+            <div><%= productName %></div>
         <% } %>
     <% 
         } else { 

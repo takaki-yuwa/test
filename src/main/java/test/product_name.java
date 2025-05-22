@@ -40,7 +40,7 @@ public class product_name extends HttpServlet {
             Statement st = con.createStatement();
             
             // SQLクエリを実行
-            ResultSet name = st.executeQuery("SELECT product_name FROM product");
+            ResultSet name = st.executeQuery("SELECT product_name ,category_name FROM product");
 
             // 結果をリストに追加
             while (name.next()) {
@@ -60,6 +60,6 @@ public class product_name extends HttpServlet {
         request.setAttribute("product_name", productNameList);
 
         // 次のJSPにフォワード
-        request.getRequestDispatcher("/product_name.jsp").forward(request, response);
+        request.getRequestDispatcher("/product_test.jsp").forward(request, response);
     }
 }
