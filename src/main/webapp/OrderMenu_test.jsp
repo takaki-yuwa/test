@@ -59,30 +59,174 @@
 
     <!-- タブ2 -->
     <input type="radio" name="tab_name" id="tab2">
-    <label class="tab_class" for="tab2">鉄板焼き</label>
-    <div class="content_class">
-      <p>鉄板焼き一覧</p>
+    <label class="tab_class" for="tab2">もんじゃ焼き</label>
+    <div class="content_class menu">
+      <%
+        if (productList != null && !productList.isEmpty()) {
+          for (product_list p : productList) {
+      %>
+      <li>
+        <div class="menu-row">
+		    <div class="break-word bold-text"><%= p.getName() %></div>
+			<div><%= p.getPrice() %> 円</div>
+		    <div>
+		        <a href="ProductDetails?name=<%= java.net.URLEncoder.encode(p.getName(), "UTF-8") %>&price=<%= p.getPrice() %>">
+		            <img src="Image/plusButton.png" alt="商品詳細画面へ遷移する">
+		        </a>
+		    </div>
+		</div>
+	  </li>
+      <%
+          }
+        } else {
+      %>
+        <p>商品情報がありません。</p>
+      <%
+        }
+      %>
     </div>
 
     <!-- タブ3 -->
     <input type="radio" name="tab_name" id="tab3">
-    <label class="tab_class" for="tab3">タブ3</label>
-    <div class="content_class">
-      <p>タブ3のコンテンツを表示します</p>
+    <label class="tab_class" for="tab3">鉄板焼き</label>
+    <div class="content_class menu">
+      <%
+        if (productList != null && !productList.isEmpty()) {
+          for (product_list p : productList) {
+      %>
+      <li>
+        <div class="menu-row">
+		    <div class="break-word bold-text"><%= p.getName() %></div>
+			<div><%= p.getPrice() %> 円</div>
+		    <div>
+		        <a href="ProductDetails?name=<%= java.net.URLEncoder.encode(p.getName(), "UTF-8") %>&price=<%= p.getPrice() %>">
+		            <img src="Image/plusButton.png" alt="商品詳細画面へ遷移する">
+		        </a>
+		    </div>
+		</div>
+	  </li>
+      <%
+          }
+        } else {
+      %>
+        <p>商品情報がありません。</p>
+      <%
+        }
+      %>
     </div>
 
     <!-- タブ4 -->
     <input type="radio" name="tab_name" id="tab4">
-    <label class="tab_class" for="tab4">タブ4</label>
-    <div class="content_class">
-      <p>タブ4のコンテンツを表示します</p>
+    <label class="tab_class" for="tab4">サイドメニュー</label>
+    <div class="content_class menu">
+      <%
+        if (productList != null && !productList.isEmpty()) {
+          for (product_list p : productList) {
+      %>
+      <li>
+        <div class="menu-row">
+		    <div class="break-word bold-text"><%= p.getName() %></div>
+			<div><%= p.getPrice() %> 円</div>
+		    <div>
+		        <a href="ProductDetails?name=<%= java.net.URLEncoder.encode(p.getName(), "UTF-8") %>&price=<%= p.getPrice() %>">
+		            <img src="Image/plusButton.png" alt="商品詳細画面へ遷移する">
+		        </a>
+		    </div>
+		</div>
+	  </li>
+      <%
+          }
+        } else {
+      %>
+        <p>商品情報がありません。</p>
+      <%
+        }
+      %>
     </div>
 
     <!-- タブ5 -->
     <input type="radio" name="tab_name" id="tab5">
-    <label class="tab_class" for="tab5">タブ5</label>
-    <div class="content_class">
-      <p>タブ5のコンテンツを表示します</p>
+    <label class="tab_class" for="tab5">ソフトドリンク</label>
+    <div class="content_class menu">
+      <%
+        if (productList != null && !productList.isEmpty()) {
+          for (product_list p : productList) {
+      %>
+      <li>
+        <div class="menu-row">
+		    <div class="break-word bold-text"><%= p.getName() %></div>
+			<div><%= p.getPrice() %> 円</div>
+		    <div>
+		        <a href="ProductDetails?name=<%= java.net.URLEncoder.encode(p.getName(), "UTF-8") %>&price=<%= p.getPrice() %>">
+		            <img src="Image/plusButton.png" alt="商品詳細画面へ遷移する">
+		        </a>
+		    </div>
+		</div>
+	  </li>
+      <%
+          }
+        } else {
+      %>
+        <p>商品情報がありません。</p>
+      <%
+        }
+      %>
+    </div>
+    <!-- タブ6 -->
+    <input type="radio" name="tab_name" id="tab6">
+    <label class="tab_class" for="tab6">お酒</label>
+    <div class="content_class menu">
+      <%
+        if (productList != null && !productList.isEmpty()) {
+          for (product_list p : productList) {
+      %>
+      <li>
+        <div class="menu-row">
+		    <div class="break-word bold-text"><%= p.getName() %></div>
+			<div><%= p.getPrice() %> 円</div>
+		    <div>
+		        <a href="ProductDetails?name=<%= java.net.URLEncoder.encode(p.getName(), "UTF-8") %>&price=<%= p.getPrice() %>">
+		            <img src="Image/plusButton.png" alt="商品詳細画面へ遷移する">
+		        </a>
+		    </div>
+		</div>
+	  </li>
+      <%
+          }
+        } else {
+      %>
+        <p>商品情報がありません。</p>
+      <%
+        }
+      %>
+    </div>
+    <!-- タブ7 -->
+    <input type="radio" name="tab_name" id="tab7">
+    <label class="tab_class" for="tab7">ボトル</label>
+    <div class="content_class menu">
+      <%
+        if (productList != null && !productList.isEmpty()) {
+          for (product_list p : productList) {
+      %>
+      <li>
+        <div class="menu-row">
+		    <div class="break-word bold-text"><%= p.getName() %></div>
+			<div><%= p.getPrice() %> 円</div>
+		    <div>
+		        <a href="ProductDetails?name=<%= java.net.URLEncoder.encode(p.getName(), "UTF-8") %>&price=<%= p.getPrice() %>">
+		            <img src="Image/plusButton.png" alt="商品詳細画面へ遷移する">
+		        </a>
+		    </div>
+		</div>
+	  </li>
+      <%
+          }
+        } else {
+      %>
+        <p>商品情報がありません。</p>
+      <%
+        }
+      %>
     </div>
   </div>
 </main>

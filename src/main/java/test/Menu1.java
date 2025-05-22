@@ -33,8 +33,8 @@ public class Menu1 extends HttpServlet {
             Connection con = DriverManager.getConnection(URL, USER, PASSWD);
             Statement st = con.createStatement();
 
-            // カテゴリーが「お好み焼き」の商品だけを取得
-            String sql = "SELECT product_name, product_price FROM product WHERE category_name = 'お好み焼き'";
+            // 商品だけを取得
+            String sql = "SELECT product_name, product_price  FROM product ";
             ResultSet rs = st.executeQuery(sql);
 
             while (rs.next()) {
@@ -51,6 +51,6 @@ public class Menu1 extends HttpServlet {
         }
 
         request.setAttribute("product_list", productList);
-        request.getRequestDispatcher("/OrderMenu_test.jsp").forward(request, response);
+        request.getRequestDispatcher("/OrderMenu.jsp").forward(request, response);
     }
 }
